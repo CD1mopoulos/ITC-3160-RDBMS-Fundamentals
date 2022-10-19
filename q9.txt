@@ -1,0 +1,2 @@
+CREATE VIEW Question_9 AS
+SELECT w.EMPID, p.PROJNO, w.lastname, w.firstname,p.PROJNAME FROM WORKER w,PROJECT p WHERE EXISTS (SELECT a.EMPID,a.PROJNO FROM assign a WHERE w.EMPID = a.empid AND a.projno = p.PROJNO);

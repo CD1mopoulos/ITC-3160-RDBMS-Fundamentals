@@ -1,0 +1,2 @@
+SELECT p.PROJNO, w.EMPID, w.lastname, w.firstname, p.startdate from worker w, PROJECT p 
+WHERE EXISTS (SELECT a.EMPID,a.PROJNO FROM assign a WHERE w.EMPID = a.empid AND a.projno = p.PROJNO) AND p.STARTDATE>='01-SEP-2021';

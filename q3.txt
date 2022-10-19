@@ -1,0 +1,1 @@
+SELECT empid,lastname,firstname,ROUND(salary/12,2) AS "Monthly Salary" FROM WORKER;
