@@ -1,1 +1,0 @@
-# ITC-3160-RDBMS-Fundamentals
