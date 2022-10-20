@@ -1,0 +1,7 @@
+SELECT lastname, firstname, empid 
+FROM Worker  
+WHERE empid in 
+    (SELECT empid 
+    FROM Assign 
+    WHERE projno = 1001) 
+ORDER BY lastname;   
