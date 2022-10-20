@@ -1,0 +1,7 @@
+SELECT p.projname, p.projno, p.startdate 
+FROM Project p 
+JOIN (SELECT startdate, count(*)  
+    FROM Project 
+    GROUP BY startdate 
+    HAVING COUNT(*) > 1 ) p1 
+ON p.startdate = p1.startdate; 
