@@ -1,0 +1,3 @@
+SELECT projno AS PROJECTNUM, projname AS PROJECTNAME 
+FROM question_9 
+WHERE empid = 101; 
