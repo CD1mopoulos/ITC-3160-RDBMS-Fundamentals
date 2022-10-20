@@ -1,0 +1,3 @@
+SELECT projNo, count(empid) as assignedWorkers, sum(hoursassigned) as hoursAssigned 
+FROM Assign 
+GROUP BY projNo; 
