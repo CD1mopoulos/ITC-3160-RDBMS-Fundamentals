@@ -1,0 +1,8 @@
+ALTER Table PROJECT  
+     ADD STATUS VARCHAR2 (10); 
+                Update Project  
+                SET STATUS = 'Active'; 
+                Update Project  
+                SET STATUS = 'Completed' where PROJNO = 1030; 
+                 Update Project  
+                  SET STATUS = 'Cancelled' where PROJNO = 1042; 
