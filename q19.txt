@@ -1,0 +1,2 @@
+Update Project p 
+SET numemployeesassigned = (SELECT COUNT (a.EMPID) FROM ASSIGN a WHERE p.PROJNO = a.PROJNO); 
