@@ -1,0 +1,4 @@
+SELECT w.lastname, w.firstname, d.departmentname 
+ 	FROM WORKER w, DEPT d 
+WHERE w.empid NOT IN (SELECT a.EMPID 
+    		FROM Assign a) AND w.departmentid = d.departmentid; 
