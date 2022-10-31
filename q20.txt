@@ -1,0 +1,25 @@
+create or replace trigger updatenumemployeesassigned  
+after insert or update or delete on Assign   
+for each row  
+begin  
+    if inserting then  
+        update Project   
+        set numemployeesassigned = numemployeesassigned + 1  
+        where projno = :new.projno;  
+        end if;  
+    if updating then  
+        update Project 
+        set numemployeesassigned = numemployeesassigned + 1 
+        where projno = :new.projno; 
+        end if;  
+    if updating then  
+        update Project 
+        set numemployeesassigned = numemployeesassigned - 1 
+        where projno = :old.projno;  
+        end if;  
+    if deleting then  
+        update Project   
+        set numemployeesassigned = numemployeesassigned - 1  
+        where projno = :old.projno;  
+        end if;  
+end; 
